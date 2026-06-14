@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Rock Store | Premium Dwayne Johnson Fan Merchandise & Membership</title>
+
+<meta name="description" content="Premium Dwayne Johnson fan merchandise, exclusive memberships, collectibles, fan community access and luxury fan experiences inspired by The Rock.">
+
+<meta name="keywords" content="Dwayne Johnson fan store, The Rock merchandise, Dwayne Johnson fan membership, The Rock collectibles, Dwayne Johnson fan club, fan community">
+
+<meta name="author" content="The Rock Store">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="The Rock Store">
+<meta property="og:description" content="Premium Dwayne Johnson fan merchandise and memberships.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+:root{
+--gold:#d4af37;
+--dark:#0b0b0b;
+--card:#151515;
+--text:#f5f5f5;
+--gray:#cfcfcf;
+}
+
+body{
+background:var(--dark);
+color:var(--text);
+overflow-x:hidden;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+header{
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("3880341.jpg");
+background-size:cover;
+background-position:center;
+min-height:100vh;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:2rem;
+font-weight:800;
+color:var(--gold);
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.menu-toggle{
+display:none;
+font-size:2rem;
+cursor:pointer;
+}
+
+.hero{
+height:85vh;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.1rem;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--gold);
+color:black;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:2.7rem;
+margin-bottom:20px;
+color:var(--gold);
+}
+
+.section-sub{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-grid img{
+width:100%;
+border-radius:20px;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:var(--card);
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.price{
+color:var(--gold);
+font-size:1.4rem;
+font-weight:700;
+margin-top:10px;
+}
+
+.membership{
+text-align:center;
+background:#111;
+padding:40px;
+border-radius:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+}
+
+table th{
+background:var(--gold);
+color:black;
+}
+
+table th,
+table td{
+padding:18px;
+border:1px solid #333;
+}
+
+table tr:nth-child(even){
+background:#1a1a1a;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.testimonial{
+background:#151515;
+padding:25px;
+border-radius:20px;
+}
+
+.faq-item{
+margin-bottom:20px;
+background:#151515;
+padding:20px;
+border-radius:15px;
+}
+
+.newsletter{
+text-align:center;
+background:#111;
+padding:50px;
+border-radius:20px;
+}
+
+.newsletter input{
+padding:15px;
+width:300px;
+max-width:100%;
+border:none;
+border-radius:8px;
+margin:10px;
+}
+
+.newsletter button{
+padding:15px 25px;
+background:var(--gold);
+border:none;
+font-weight:600;
+cursor:pointer;
+}
+
+.contact-box{
+background:#111;
+padding:50px;
+border-radius:20px;
+text-align:center;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.contact-buttons a{
+background:var(--gold);
+color:black;
+text-decoration:none;
+padding:15px 30px;
+border-radius:40px;
+font-weight:700;
+}
+
+.floating-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+z-index:999;
+}
+
+footer{
+background:#050505;
+padding:25px;
+text-align:center;
+}
+
+@media(max-width:900px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#111;
+flex-direction:column;
+text-align:center;
+padding:20px 0;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hero h1{
+font-size:2.6rem;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+}
+.homefirst{
+    text-decoration: none;
+    color: #d4af37;
+}
+</style>
+</head>
+<body>
+
+<a class="floating-whatsapp"
+href="https://wa.me/13439223576"
+target="_blank">
+WhatsApp
+</a>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+THE ROCK STORE
+</div>
+
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="/about">About</a></li>
+<li><a href="/dwanyestore">Store</a></li>
+<li><a href="/membership">Membership</a></li>
+<li><a href="#career">Career</a></li>
+<li><a href="/faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<div class="hero-content">
+
+<h1>Dwayne Johnson Fan Store & Membership</h1>
+
+<p>
+Exclusive fan merchandise, luxury collectibles,
+community memberships and premium fan experiences.
+</p>
+
+<a href="dwanyestore.html" class="btn btn-primary">
+Explore Collection
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About Dwayne Johnson
+</h2>
+
+<div class="about-grid">
+
+<img src="6406347.jpg" alt="Dwayne Johnson">
+
+<div>
+
+<p>
+Dwayne "The Rock" Johnson is a global entertainment icon,
+actor, entrepreneur and former professional wrestler whose
+career has inspired millions around the world.
+</p>
+
+<br>
+
+<p>
+This fan community celebrates his achievements through
+exclusive merchandise, memberships and collectibles.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="store">
+
+<div class="container">
+
+<h2 class="section-title">
+Premium Merchandise
+</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<img src="183543 (2).jpg">
+<div class="card-content">
+<h3>VIP Signature Hoodie</h3>
+<p>Luxury Edition</p>
+<div class="price">$199</div>
+<a href="dwanyestore.html" class="homefirst">
+    Buy Now
+</a>   
+</div>
+   
+</div>
+
+<div class="card">
+<img src="183543 (1).jpg">
+<div class="card-content">
+<h3>Elite Fan Box</h3>
+<p>Exclusive Collectibles</p>
+<div class="price">$189</div>
+<a href="dwanyestore.html" class="homefirst">
+    Buy Now
+</a> 
+</div>
+</div>
+
+<div class="card">
+<img src="images/champion-bundle.jpg">
+<div class="card-content">
+<h3>Champion Bundle</h3>
+<p>Premium Collection</p>
+<div class="price">$499</div>
+<a href="dwanyestore.html" class="homefirst">
+    Buy Now
+</a> 
+</div>
+</div>
+
+<div class="card">
+<img src="65411.jpg">
+<div class="card-content">
+<h3>Ultimate Experience Pack</h3>
+<p>Luxury Fan Edition</p>
+<div class="price">$579</div>
+<a href="dwanyestore.html" class="homefirst">
+    Buy Now
+</a> 
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="membership">
+
+<div class="container">
+
+<h2 class="section-title">
+Fan Membership
+</h2>
+
+<div class="card-grid">
+
+<div class="membership">
+<h3>Silver Membership</h3>
+<p>Exclusive Fan Updates</p>
+<h2>$199 / Year</h2>
+<a href="membership.html" class="homefirst">
+    Join Now
+</a> 
+</div>
+
+<div class="membership">
+<h3>Gold Membership</h3>
+<p>Merchandise Benefits</p>
+<h2>$399 / Year</h2>
+<a href="membership.html" class="homefirst">
+    Join Now
+</a> 
+</div>
+
+<div class="membership">
+<h3>Platinum Membership</h3>
+<p>Premium Community Access</p>
+<h2>$999 / Year</h2>
+<a href="membership.html" class="homefirst">
+    Join Now
+</a> 
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="career">
+
+<div class="container">
+
+<h2 class="section-title">
+Career Highlights
+</h2>
+
+<table>
+
+<tr>
+<th>Year</th>
+<th>Achievement</th>
+<th>Industry</th>
+</tr>
+
+<tr>
+<td>1996</td>
+<td>Professional Wrestling Debut</td>
+<td>Sports Entertainment</td>
+</tr>
+
+<tr>
+<td>2001</td>
+<td>Hollywood Entry</td>
+<td>Film</td>
+</tr>
+
+<tr>
+<td>2012</td>
+<td>Global Movie Success</td>
+<td>Entertainment</td>
+</tr>
+
+<tr>
+<td>2020+</td>
+<td>Business Expansion</td>
+<td>Entrepreneurship</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Testimonials
+</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+★★★★★
+<br><br>
+Amazing merchandise quality and premium membership experience.
+</div>
+
+<div class="testimonial">
+★★★★★
+<br><br>
+One of the best fan communities I've joined.
+</div>
+
+<div class="testimonial">
+★★★★★
+<br><br>
+Fantastic collectibles and exclusive content.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<div class="container">
+
+<h2 class="section-title">
+FAQ
+</h2>
+
+<div class="faq-item">
+<h3>Is this an official Dwayne Johnson website?</h3>
+<p>No. This is a fan community and merchandise website.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do memberships renew yearly?</h3>
+<p>Yes, memberships are billed annually.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can I contact support?</h3>
+<p>Yes. Use the WhatsApp or email buttons below.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="newsletter">
+
+<h2>Join Our Newsletter</h2>
+
+<p>Receive exclusive updates and fan content.</p>
+
+<input type="email" placeholder="Enter Email">
+
+<button>Subscribe</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>Contact Support</h2>
+
+<p>Reach our support team anytime.</p>
+
+<div class="contact-buttons">
+
+<a href="https://wa.me/13439223576" target="_blank">
+WhatsApp Chat
+</a>
+
+<a href="mailto:jasonst@gmail.com">
+Email Support
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 The Rock Store. All Rights Reserved.
+
+</footer>
+
+<script>
+
+const menuToggle=document.getElementById("menuToggle");
+const navLinks=document.getElementById("navLinks");
+
+menuToggle.addEventListener("click",()=>{
+navLinks.classList.toggle("active");
+});
+
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Store",
+"name":"The Rock Store",
+"description":"Premium fan merchandise inspired by Dwayne Johnson",
+"url":"https://yourdomain.com"
+}
+</script>
+
+</body>
+</html>
+```
